@@ -63,7 +63,7 @@
 }
 
 .title{
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("/images/title-bg.gif");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../images/title-bg.gif");
     background-position: center;
     background-size: cover;
 
@@ -118,7 +118,7 @@
 
 .banner{
     min-height: 50vh;
-    background-image: url("/images/banner-image.jpg");
+    background-image: url("../images/banner-image.jpg");
     @include parallaxBg
 }
 .our-legends{
@@ -169,20 +169,20 @@
     .box1{
         margin-bottom: 200px;
         .image1{
-            @include imageProperties("/images/lee-priest.jpg");
+            @include imageProperties("../images/lee-priest.jpg");
         }
     }
     .box2{
         margin-top: 200px;
         margin-bottom: 100px;
         .image2{
-            @include imageProperties("/images/frank-zane.jpg");
+            @include imageProperties("../images/frank-zane.jpg");
         }
     }
     .box3{
         margin-top: 400px;
         .image3{
-            @include imageProperties("/images/andreas-cahling.jpg");
+            @include imageProperties("../images/andreas-cahling.jpg");
         }
     }
 }
@@ -205,7 +205,7 @@
 }
 
 .why-us-left-pic{
-    background:url("/images/gym-pic.jpg");
+    background:url("../images/gym-pic.jpg");
     background-size: cover;
 }
 
@@ -226,7 +226,7 @@
     }
 }
 .why-us-right-pic{
-    background:url("/images/gym-pic-2.jpg");
+    background:url("../images/gym-pic-2.jpg");
     background-size: cover;
 }
 

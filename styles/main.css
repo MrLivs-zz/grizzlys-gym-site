@@ -84,8 +84,8 @@
 }
 
 .title {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/images/title-bg.gif");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/title-bg.gif");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/title-bg.gif");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/title-bg.gif");
   background-position: center;
   background-size: cover;
 }
@@ -143,7 +143,7 @@
 
 .banner {
   min-height: 50vh;
-  background-image: url("/images/banner-image.jpg");
+  background-image: url("../images/banner-image.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -204,7 +204,7 @@
 }
 
 .legends .box1 .image1 {
-  background-image: url("/images/lee-priest.jpg");
+  background-image: url("../images/lee-priest.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -215,7 +215,7 @@
 }
 
 .legends .box2 .image2 {
-  background-image: url("/images/frank-zane.jpg");
+  background-image: url("../images/frank-zane.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -225,7 +225,7 @@
 }
 
 .legends .box3 .image3 {
-  background-image: url("/images/andreas-cahling.jpg");
+  background-image: url("../images/andreas-cahling.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -262,7 +262,7 @@
 }
 
 .why-us-left-pic {
-  background: url("/images/gym-pic.jpg");
+  background: url("../images/gym-pic.jpg");
   background-size: cover;
 }
 
@@ -298,7 +298,7 @@
 }
 
 .why-us-right-pic {
-  background: url("/images/gym-pic-2.jpg");
+  background: url("../images/gym-pic-2.jpg");
   background-size: cover;
 }
 
