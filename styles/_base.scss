@@ -1,0 +1,42 @@
+//contained within this file are all your resets, variables, mixins, and any utility classes.
+$primColor: #1b1c25;
+$bgColor: white;
+$subtextColor: #bbb;
+
+
+$min_width: 10vw;
+$max_width: 100vw;
+$min_font: 16px;
+$max_font: 30px;
+
+@mixin h3Text($direction) {
+    padding-top: 5%;
+    padding-right: 20%;
+    text-align: $direction;
+    font-size-adjust: 3;
+    color: $bgColor;
+    
+}
+@mixin zigZag {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: $primColor;
+    overflow: hidden;
+    min-height: 50vh;
+    
+}
+@mixin parallaxBg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+@mixin imageProperties($url){
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+}
+

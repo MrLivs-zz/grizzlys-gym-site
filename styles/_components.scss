@@ -1,0 +1,16 @@
+//anything reusable such as buttons, navbars, cards etc.
+
+.down-icon{
+    display: block !important;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+.fa-angle-down{
+    opacity: .5;
+    color: black;
+}
+
+.fa-angle-down:hover{
+    opacity: 1;
+}
