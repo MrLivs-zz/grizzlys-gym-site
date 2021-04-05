@@ -1,11 +1,6 @@
-
+//contains all the CSS that handles the layout, such as the container and any grid systems.
 @import "./base";
 @import "./components";
-
-html{
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
-}
-
 
 *{
     margin: 0;
@@ -21,22 +16,6 @@ html{
         text-decoration: none;
     }
 }
-h1 {  
-    font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
-    @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-  }
-  h2 {  
-    font-size: $mod_1*$mod_1*$mod_1 *1rem; 
-    @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-  }
-  h3 { 
-    font-size: $mod_1*$mod_1 *1rem;
-    @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
-  }
-  h4{
-    font-size: $mod_1 *1rem;
-    @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2* $min_font);
-  }
 .navBar {
     background-color: transparent;
     overflow: hidden;
@@ -49,13 +28,29 @@ h1 {
     overflow: hidden;
 
     height: 10%;
-    padding: 2%;
-
+    padding: 10px;
+    a{
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding-left: 10%;
+        text-decoration: none;
+        font-size: 17px;
+        z-index: 1;
+        &:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        &:active{
+            color: white;
+        }
+    }
     .icon{
         display: none;
     }
     img{
-        width: 25%;
+        width: 15%;
     }
   }
   
@@ -80,15 +75,17 @@ h1 {
     }
     h1{
         font-weight: 900;
-        line-height: 1em;
+        font-size-adjust: 3;
+        line-height: 5em;
     }
 
     p{
         color: $subtextColor;
         padding-top: 5%;
         padding-left: 10px;
-
+        font-size-adjust: 1;
         width: 80%;
+        line-height: 3em;
 
     }
 }
@@ -96,16 +93,15 @@ h1 {
 .our-story{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 90vh;
     overflow: hidden;
     img{
         float: right;
-        height: 90%;
 
     }
     h3{
         margin-top: 20%;
         margin-left:20%;
+        font-size-adjust: 3;
         color: $primColor;
         
     }
@@ -113,7 +109,9 @@ h1 {
         margin-left:20%;
         color: $subtextColor;
         padding-left: 10px;
+        font-size-adjust: .8;
         width: 80%;
+        line-height: 3em;
         text-align: justify;
     }
 }
@@ -128,6 +126,7 @@ h1 {
         text-align: right;
         margin-top: 5%;
         margin-right:20%;
+        font-size-adjust: 3;
         color: $primColor;
         
     }
@@ -138,6 +137,8 @@ h1 {
         margin-right:20%;
         color: $subtextColor;
         padding-left: 10px;
+        font-size-adjust: .8;
+        line-height: 3em;
     }
 }
 
@@ -155,12 +156,15 @@ h1 {
     }
     h4{
         padding-top: 10px;
+        font-size-adjust: .8;
         color: $primColor;
     }
     p{
         padding-top: 10px;
         color: #bbb;
+        font-size-adjust: .7;
         padding-right: 10px;
+        line-height: 3em;
     }
     .box1{
         margin-bottom: 200px;
@@ -189,10 +193,13 @@ h1 {
         @include h3Text(right)
     }
     p{
-        margin:auto;
+        margin-right:20%;
         color: $subtextColor;
-        width: 80%;
+        font-size-adjust: .8;
+        width: 60%;
+        line-height: 3em;
         text-align: justify;
+        float: right;
         padding-bottom: 5%;
     }
 }
@@ -205,13 +212,16 @@ h1 {
 .why-us-right{
     @include zigZag;
     h3{
-       @include h3Text(left)
+       @include h3Text(right)
     }
     p{
-        margin:auto;
+        margin-right:20%;
         color: $subtextColor;
-        width: 80%;
+        font-size-adjust: .8;
+        width: 60%;
+        line-height: 3em;
         text-align: justify;
+        float: right; 
         padding-bottom: 5%;
     }
 }
@@ -228,6 +238,7 @@ h1 {
         padding-top: 10%;
         padding-left: 10%;
         text-align: left;
+        font-size-adjust: 2.7;
         color: $bgColor;
         width: 50%;
     }
@@ -243,8 +254,11 @@ h1 {
     gap: 5%;
     p{
         max-width: 430px;
+        padding-top: 10px;
         color: #bbb;
+        font-size-adjust: .6;
         padding-right: 10px;
+        line-height: 2em;
     }
 
     img{
@@ -283,7 +297,9 @@ h1 {
     .quote{
         padding-top: 10px;
         color: #bbb;
+        font-size-adjust: 1.3;
         padding-right: 10px;
+        line-height: 3em;
         width: 80%;
         text-align: center;
 
@@ -377,36 +393,20 @@ footer{
 
 @media (max-width: 1024px){
     .title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .title-text,h1{
-            padding:0 !important;
-        }
-        .title-text{
-            flex-grow: 5;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            width: 70%;
-        }
-        .down-icon{
-            flex-grow: 1;
+        h1{
+            font-size-adjust: 2.5;
         }
     }
     .our-legends{
         h3{
-            width: 100%;
-            text-align: center;
-        }
-        p{
-            margin-left: 20%;
+            width: 50%;
+            float: right;
         }
     }
 
     .dark{
         h3{
+            font-size-adjust: 2.2;
             width: 100%;
             text-align: center;
             padding-left: unset;
@@ -415,18 +415,15 @@ footer{
     }
 
     .legends{
-        padding: 5% 10% 10% 10%;
+        padding: 0 10% 10% 10%;
     }
     .why-us-right,.why-us-left{
         h3{
-            // text-align: center;
-            // padding-left: unset;
-            // padding-right: unset;
+            line-height: 6em;
         }
         p{
             margin-top: 10%;
             margin-bottom: 20%;
-            
         }
     }
     .videos{
@@ -454,60 +451,54 @@ footer{
 
 
 }
-@media (max-width: 900px){
-    h1{
-        padding-top: 20%;
-    }
-    h3{
-        float:unset;
-        padding-left:0 !important;
-        padding-right:0 !important;
-    }
-    p{
-        margin-left:auto;
-        margin-right:auto;
-        width: unset !important;
-        margin: unset !important;
-        padding: 5%;
-    }
-    .our-story{
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr;
-        h3,p{
-            margin:auto;
-        }
-        h3{
-            text-align: center;
-        }
-        .bbimage{
-            text-align: center;
-        }
-        img{
-            float: unset;
-        }
-    }
-
-    .our-legends{
-        h3,p{
-            margin:auto;
-            width: 80%;
-        }
-        h3{
-            float: unset;
-        }
-
-    }
-}
 
 @media (max-width: 768px){
-
-    .title-text{
-        padding-top: 10%;
-        padding-left: 5%;
-        h1{
+    .navBar a:not(:first-child) {display: none;}
+    .navBar{
+        a.icon{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: block;
         }
     }
+    .navBar.responsive {
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        a{
+            float: none;
+            display: block;
+            text-align: left;
+            padding: 14px 16px;
+        }
+        a.icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
 
+
+    }
+
+
+    .title{
+        padding-top: 10%;
+        h1{
+            font-size-adjust: 2;
+            line-height: 4em;
+        }
+    }
+    h3{
+            float:unset;
+            margin-right: unset;
+            width: unset;
+            text-align: center;
+            line-height: 6em;
+            padding: 5%;
+
+    }
     .why-us-left,.why-us-right{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -518,7 +509,9 @@ footer{
             grid-row:2;
         }
         p{
-
+            padding: 5% 5% 10% 5%;
+            width: unset;
+            margin:unset;
         }
     }
     .our-legends{
@@ -526,8 +519,8 @@ footer{
             float:unset;
             margin-right: unset;
             width: unset;
-            margin:auto;
             text-align: center;
+            line-height: 6em;
         }
         p{
             padding-top: 5%;
@@ -557,25 +550,20 @@ footer{
 
 
 }
-@media (max-width: 680px){
-    .legends{
-        grid-template-columns: unset;
-        .box1,.box2,.box3{
-            padding: 5%;
-            text-align: center;
-            margin-top: unset;
-            margin-bottom: unset;
-        }
-    }
-
-
-}
 
 @media (max-width: 580px){
+    p{
+        margin-left:auto;
+        margin-right:auto;
+        padding: 5% 5% 10% 5% !important;
+        width: unset !important;
+        margin: unset !important;
+    }
     h1{
         padding-top: 20%;
     }
     h3{
+        font-size-adjust: 2 !important;
         text-align: center;
         padding-left:0 !important;
         padding-right:0 !important;
@@ -583,17 +571,21 @@ footer{
     }
     .title{
         h1{
-
+            font-size-adjust: 1.5;
+            line-height: 3em;
         }
     }
-
-    .our-legends{
-        h3{
-
+    .our-story{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        img{
+            float: unset;
         }
     }
     .dark{
         h3{
+            font-size-adjust: 2.2;
+            line-height: 4em;
         }
     }
     .legends{
